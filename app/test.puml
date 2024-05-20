@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+/'
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+Alice->Text:Start()'/
+
+class Student {
+  + studentID : int
+  - name : string
+  + enroll(course: Course)
+  - calculateGrade() : Grade
+}
+
+interface Person {
+  + getName() : string
+  + getAge() : int
+}
+
+enum Gender {
+  MALE,
+  FEMALE
+}
+
+
+
+
+
+
+/'Student实现了Person与Gender有关联'/
+Student ..|> Person
+Student o-- Gender
+@enduml

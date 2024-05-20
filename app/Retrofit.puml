@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+autonumber
+activate "Retrofit.Builder()"
+"Retrofit.Builder()"-> "Retrofit.Builder()" :baseUrl("...")
+"Retrofit.Builder()"-> "Retrofit.Builder()":addConverterFactory(...)
+"Retrofit.Builder()"-> Retrofit:build()
+activate Retrofit
+Retrofit->Proxy:create
+
+
+
+
+
+
+
+@enduml
